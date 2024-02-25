@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "e4bb7556-3599-4310-955d-967f19a3dd2a",
+		"name": "Spring Demo",
+		"description": "_Implementation of REST API in spring boot project, the links / URL which can be customized are considered API._",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32771020"
+	},
+	"item": [
+		{
+			"name": "GET REQUEST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				},
+				"description": "The url gets us list of all the saved objects in the form of key value pairs"
+			},
+			"response": []
+		},
+		{
+			"name": "POST REQUEST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Portable Lamp\",\r\n    \"description\" : \"Portable lamp that really handy and helpful for outings\",\r\n    \"price\" : \"2000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				},
+				"description": "The URL used to save the objects in key-value pair form"
+			},
+			"response": []
+		},
+		{
+			"name": "GET BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"1"
+					]
+				},
+				"description": "The URL fetch us the data by receiving ID"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE REQUEST",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"5"
+					]
+				},
+				"description": "Deletes the record when ID is provided"
+			},
+			"response": []
+		}
+	]
+}
